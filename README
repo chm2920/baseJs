@@ -1,2 +1,17 @@
 
 collections
+
+纲要：
+
+
+
+
+说明：
+
+base.js						基础类型
+alth.js						算法
+detect.js					检测
+event.js					事件
+collect.js				奇巧
+expr.js						正则
+test.js						测试
