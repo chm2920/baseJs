@@ -1,0 +1,110 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>drag and drop</title>
+		<style>
+			body{background:#EEE;height:1000px;text-align:center;}
+			.container{width:970px;margin:0 auto;text-align:left;}
+			.i_l{float:left;display:inline;}
+			.i_n{width:300px;padding:0 10px;}
+			.box{border:1px solid #DDD;margin:0 0 14px 0px;width:300px;height:100px;background:#FFF;}
+				.drag_header{background:#F9F9F9;height:30px;line-height:30px;padding-left:10px;border-bottom:1px solid #DDD;}
+				.drag_content{padding:10px 20px;}
+			.no-drag{height:0;border:0;padding:0;overflow:hidden;}
+		</style>
+		<script src="drag.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="panel" style="position:relative;overflow:hidden;width:100%;height:100%;">
+				<div class="i_l i_n dragdrop-dropTarget">
+					<div id="drag_1" class="box dragdrop-draggable">
+						<div id="drag_1_h" class="drag_header">
+							1
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>
+					</div>
+					<div id="drag_2" class="box dragdrop-draggable">
+						<div id="drag_2_h" class="drag_header">
+							2
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>
+					</div>
+					<div id="drag_3" class="box dragdrop-draggable">
+						<div id="drag_3_h" class="drag_header">
+							3
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>
+					</div>
+					<div id="hidden_div_1" class="dragdrop-draggable no-drag">
+						<div id="hidden_div_1_h"></div>
+					</div>
+				</div>
+				<div class="i_l i_n dragdrop-dropTarget">
+					<div id="drag_4" class="box dragdrop-draggable">
+						<div id="drag_4_h" class="drag_header">
+							4
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>							
+					</div>
+					<div id="drag_5" class="box dragdrop-draggable">
+						<div id="drag_5_h" class="drag_header">
+							5
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>							
+					</div>
+					<div id="drag_6" class="box dragdrop-draggable">
+						<div id="drag_6_h" class="drag_header">
+							6
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>							
+					</div>
+					<div id="hidden_div_2" class="dragdrop-draggable no-drag">
+						<div id="hidden_div_2_h"></div>
+					</div>
+				</div>
+				<div class="i_l i_n dragdrop-dropTarget">
+					<div id="drag_7" class="box dragdrop-draggable">
+						<div id="drag_7_h" class="drag_header">
+							7
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>							
+					</div>
+					<div id="drag_8" class="box dragdrop-draggable">
+						<div id="drag_8_h" class="drag_header">
+							8
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>							
+					</div>
+					<div id="drag_9" class="box dragdrop-draggable">
+						<div id="drag_9_h" class="drag_header">
+							9
+						</div>
+						<div class="drag_content">
+							&nbsp;
+						</div>						
+					</div>
+					<div id="hidden_div_3" class="dragdrop-draggable no-drag">
+						<div id="hidden_div_3_h"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
