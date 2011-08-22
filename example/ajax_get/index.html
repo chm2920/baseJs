@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AjaxGet</title>
+<style>
+*{margin:0;padding:0;}
+body{margin:0;padding:0;font-size:12px;color:#333;text-align:center;font-family:SimSun;}
+form,ul,ul li,p{margin:0;padding:0;}
+ul, ul li{list-style:none;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#ff2894;text-decoration:underline;}
+img{border:0px;}
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden; }
+* html>body .clearfix { display:inline-block; width:100%; }
+* html .clearfix { height:1%; /* End hide from IE-mac */ } 
+/* ie7 hack*/ 
+*+html .clearfix { min-height:1%; } 
+.clearfix{zoom:1;} 
+
+h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
+input, option, select, textarea, button {font-size: 12px;}
+
+#wapper{margin:0 auto;width:100%;text-align:center;}
+#Container{margin:0 auto;width:920px;text-align:left;}
+#Header{height:120px;border:1px solid #EEE;}
+#PageBody{min-height:200px;margin-top:10px;}
+#Side{float:left;display:inline;width:180px;border:1px solid #EEE;}
+#Main{float:right;display:inline;width:720px;border:1px solid #EEE;}
+#Footer{height:100px;border:1px solid #EEE;margin-top:10px;}
+</style>
+<script type="text/javascript" src="ajax.js"></script>
+<script>
+function $(v){return document.getElementById(v);}
+
+function get(u){
+	switch(u){
+		case 'a':
+			ajax.get('a.html', function(data){
+				update(data);
+			});
+			break;
+		case 'b':
+			ajax.get('b.html', function(data){
+				update(data);
+			});
+	}
+}
+function update(data){
+	$('Main').innerHTML = data;
+}
+</script>
+</head>
+
+<body>
+<div id="wapper">
+<div id="Container">
+	<div id="Header">
+	</div>
+	<div id="PageBody" class="clearfix">
+		<div id="Side">
+			<ul>
+				<li><a href="/">index</a></li>
+				<li><a href="javascript:void(0);" onclick="get('a');">a</a></li>
+				<li><a href="javascript:void(0);" onclick="get('b');">b</a></li>
+			</ul>
+		</div>
+		<div id="Main">
+		</div>
+	</div>
+	<div id="Footer">
+	</div>
+</div>
+</div>
+</body>
+</html>

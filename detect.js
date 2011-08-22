@@ -28,3 +28,52 @@ var detect = (function(elem){
 	p.appendChild(tb);
 	document.body.appendChild(p);
 })
+
+// http://i-res.fetionpic.com/j/public/framework/framework.js
+//browser
+(function(fk, undef)
+{
+	var ua = navigator.userAgent, core, type, version;
+	core = (function()
+	{
+		if (/gecko/i.test(ua) && !/like gecko/i.test(navigator.userAgent)) return 'Gecko';
+		if (/webkit/i.test(ua)) return 'WebKit';
+		return 'Trident';
+	})();
+	type = (function()
+	{
+		if (/(\d+\.\d)?(?:\.\d)?\s+safari\/?(\d+\.\d+)?/i.test(ua) && !/chrome/i.test(ua))
+		{
+			version = +(RegExp['\x241'] || RegExp['\x242']);
+			return 'safari';
+		}
+		if (/opera\/(\d+\.\d)/i.test(ua))
+		{
+			version = +RegExp['\x241'];
+			return 'opera';
+		}
+		if (/chrome\/(\d+\.\d)/i.test(ua))
+		{
+			version = +RegExp['\x241'];
+			return 'chrome';
+		}
+		if (/msie (\d+\.\d)/i.test(ua))
+		{
+			//IE 8下，以documentMode为准
+			//在模板中可能会有$，为防止冲突，将$1 写成 \x241
+			version = document.documentMode || +RegExp['\x241'];
+			return 'ie';
+		}
+		if (/firefox\/(\d+\.\d)/i.test(navigator.userAgent))
+		{
+			version = +RegExp['\x241'];
+			return 'firefox';
+		}
+	})();
+	fk.browser = {
+		isStrict: document.compatMode == "CSS1Compat",
+		core: core,
+		type: type,
+		version: version
+	};
+})(framework);
